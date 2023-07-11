@@ -55,25 +55,40 @@ async function addElementAndSendToApi({ name, url }) {
 
 }
 
-// async function editElement({ name, url }) {
-    
-//     fetch('http://localhost:3000', {
-//         method: 'PATCH',
-//         body: JSON.stringify({
-//             name: name,
-//             url: url
-//         }),
-//         headers: {
-//             'Content-type': 'application/json',
-//         },
-//     })
+async function editElement(element, { name, url, _id }) {
+    input.value = `${name},${url}`
 
-// }
+    form.addEventListener('submit', (event) => {
+        
+        event.preventDefault();
+
+        let { value } = input
+        const [nameSplit, urlSplit] = value.split(',')
+
+        const response = fetch(`http://localhost:3000/${_id}`, { method: 'DELETE' })
+    }
+
+)
+    if(confirm('deseja alterar?')){
+        const response = await fetch('http://localhost:3000', {
+        method: 'PATCH',
+        body: JSON.stringify({
+            name: nameSplit,
+            url: urlSplit
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    window.location.reload()
+    }
+}
+        
 
 async function removeElement(element, { name, url, _id }) {
     if (confirm('Tem certeza que deseja deletar?')) {
 
-        const response = await fetch(`http://localhost:3000/${_id}`, { method: "DELETE" })
+        const response = await fetch(`http://localhost:3000/${_id}`, { method: 'DELETE' })
 
         element.parentNode.remove()
 
