@@ -1,0 +1,111 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+body a, body a:visited {
+  text-decoration: none;
+  color: #030005;
+}
+
+header {
+  width: 100vw;
+  background: linear-gradient(to right, #41295a, #2f0743);
+  height: 13em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  width: 90%;
+  max-width: 1120px;
+}
+
+h1 {
+  color: #f5f5f5;
+}
+
+main {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 8px 0px rgba(24, 9, 49, 0.33);
+  height: 45em;
+  border-radius: 10px;
+  margin-top: -2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+}
+
+.links {
+  padding: 5px;
+  width: 90%;
+}
+
+.links li span {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.links button {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.links span {
+  margin-right: 10em;
+}
+
+#inputButton {
+  background-color: #41295a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #f5f5f5;
+  padding: 10px;
+}
+
+#inputName {
+  width: 31em;
+  padding: 8px;
+}
+
+.links i {
+  text-decoration: none;
+  padding-left: 200px;
+}
