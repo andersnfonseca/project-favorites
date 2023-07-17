@@ -102,6 +102,7 @@ footer {
 
     .text-content {
         min-width: 30vw;
+        max-width: 45vw;
     }
 
     .video img {
@@ -112,6 +113,14 @@ footer {
     .ads img {
         max-width: 250px;
         max-height: 250px;
+    }
+
+    .midia-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
     
 }
