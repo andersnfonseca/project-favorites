@@ -1,7 +1,15 @@
-const ul = document.querySelector('ul')
+const ul = document.getElementById('list-favorites')
 const input = document.querySelector('input')
 const form = document.querySelector('form')
 
+
+function showMenu() {
+    if (navbar.style.display == 'block') {
+     navbar.style.display = 'none'
+    } else {
+     navbar.style.display = 'block'
+    }
+ }
 
 async function load() {
     const response = await fetch('http://localhost:3000/')
@@ -12,9 +20,10 @@ async function load() {
 load()
 
 function addElement(name, url, _id) {
-
     const li = document.createElement('li')
     const a = document.createElement("a")
+    // const actions = document.createElement("div")
+    // actions.classList.add('actions')
     const trash = document.createElement("span")
     const edit = document.createElement("span")
 
@@ -29,6 +38,7 @@ function addElement(name, url, _id) {
     trash.onclick = () => removeElement(trash, { name, url, _id })
 
     ul.append(li)
+    // ul.append(actions)
     li.append(a)
     li.append(edit)
     li.append(trash)

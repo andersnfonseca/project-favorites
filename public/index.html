@@ -1,48 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Meus Links</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-        <div class="title">
-            <h1>Meus Links</h1>
-        </div>
+      <div class="logo">
+        <h2>Meus Links</h2>
+      </div>
+      <form action="">
+        <input
+          type="text"
+          id="inputName"
+          placeholder="Digite o nome do endereço e o endereço separados por vírgula..."
+        />
+        <button type="input" id="inputButton">Adicionar Link</button>
+      </form>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="form">
-                <form action="">
-                    <input type="text" id="inputName" placeholder="Digite o nome do endereço e o endereço separados por vírgula...">
-                    <input type="submit" id="inputButton" onclick="addElement()" value="Adicionar link">
-                </form>
-            </div>
-            <div class="links">
+    <nav>
+      <a href="#"
+        ><i
+          id="hamburguer"
+          onclick="showMenu()"
+          class="fa-solid fa-bars fa-shake"
+          style="color: #000"
+        ></i
+      ></a>
+      <div id="navbar" class="nav-responsive">
+        <ul id="nav-ul">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#favoritos">Links</a></li>
+          <li><a href="#comoUsar">Como usar</a></li>
+          <li><a href="#rodape">Rodapé</a></li>
+        </ul>
+      </div>
+    </nav>
 
-                <ul class="listOfLinks">
-                    
-                </ul>
-                
-            </div>
+    <main>
+      <div class="container-links">
+        <h2>Lista de favoritos:</h2>
+
+        <ul id="list-favorites"></ul>
+      </div>
+
+      <div class="container-others">
+
+        <div class="text-content">
+          <section>
+            <h2>Como usar:</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi,
+              qui aspernatur reiciendis natus nisi recusandae corrupti, nihil eos
+              soluta necessitatibus, cumque ut? Sapiente sed dolorum magnam! Enim
+              magnam dolorem fugiat.
+            </p>
+          </section>
         </div>
+       
+        <div class="midia-content">
+          <div class="video">
+
+            <img src="./assets/video.jpg" alt="">
+
+          </div>
+          <div class="ads">
+
+            <img src="./assets/ads.png" alt="">
+
+          </div>
+        </div>
+       
+      </div>
     </main>
 
-</body>
-
+    <footer>
+      <span>webacademy</span>
+    </footer>
+  </body>
 </html>
